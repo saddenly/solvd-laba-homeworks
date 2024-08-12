@@ -1,10 +1,10 @@
 public class Laptop extends Computer {
-    private double screenSize;
+    private Display display;
     private double weight;
 
-    public Laptop(String brand, String model, int ramSize, int storageSize, double screenSize, double weight) {
+    public Laptop(String brand, String model, int ramSize, int storageSize, Display display, double weight) {
         super(brand, model, ramSize, storageSize);
-        this.screenSize = screenSize;
+        this.display = display;
         this.weight = weight;
     }
 
@@ -21,19 +21,12 @@ public class Laptop extends Computer {
     @Override
     public void displaySpecs() {
         super.displaySpecs();
-        System.out.println("Screen Size: " + screenSize + " inches, Weight: " + weight + " kg");
+        System.out.println("Screen height and width: " + display.getScreenHeight() + " "
+                + display.getScreenWidth() + " inches, Weight: " + weight + " kg");
     }
 
     public void carry() {
         System.out.println("Carrying laptop around");
-    }
-
-    public double getScreenSize() {
-        return screenSize;
-    }
-
-    public void setScreenSize(double screenSize) {
-        this.screenSize = screenSize;
     }
 
     public double getWeight() {

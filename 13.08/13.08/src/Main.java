@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Laptop laptop = new Laptop("Dell", "XPS 13", 16, 512, 13.3, 1.2);
+        Laptop laptop = new Laptop("Dell", "XPS 13", 16, 512, new Display(13.3, 12.2), 1.2);
         laptop.displaySpecs();
         laptop.boot();
         laptop.carry();
@@ -18,7 +18,7 @@ public class Main {
         server.handleRequest();
         server.shutdown();
 
-        GamingLaptop gamingLaptop = new GamingLaptop("Asus", "Rog Zephyrus", 32, 1024, 15.6, 2.5, "NVIDIA RTX 3060 TI");
+        GamingLaptop gamingLaptop = new GamingLaptop("Asus", "Rog Zephyrus", 32, 1024, new Display(15.6, 14.4), 2.5, "NVIDIA RTX 3060 TI");
         gamingLaptop.displaySpecs();
         gamingLaptop.boot();
         gamingLaptop.playGame("Wither 3");

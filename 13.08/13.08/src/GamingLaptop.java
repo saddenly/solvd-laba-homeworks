@@ -1,8 +1,8 @@
 public class GamingLaptop extends Laptop {
     private String gpuModel;
 
-    public GamingLaptop(String brand, String model, int ramSize, int storageSize, double screenSize, double weight, String gpuModel) {
-        super(brand, model, ramSize, storageSize, screenSize, weight);
+    public GamingLaptop(String brand, String model, int ramSize, int storageSize, Display display, double weight, String gpuModel) {
+        super(brand, model, ramSize, storageSize, display, weight);
         this.gpuModel = gpuModel;
     }
 

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class GamingLaptop extends Laptop {
     private String gpuModel;
 
@@ -32,5 +34,25 @@ public class GamingLaptop extends Laptop {
 
     public void setGpuModel(String gpuModel) {
         this.gpuModel = gpuModel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof GamingLaptop that)) return false;
+        if (!super.equals(o)) return false;
+        return Objects.equals(gpuModel, that.gpuModel);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), gpuModel);
+    }
+
+    @Override
+    public String toString() {
+        return "GamingLaptop{" +
+                "gpuModel='" + gpuModel + '\'' +
+                '}';
     }
 }

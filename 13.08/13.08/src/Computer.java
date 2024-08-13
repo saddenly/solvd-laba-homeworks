@@ -1,23 +1,19 @@
-public class Computer {
-    private String brand;
-    private String model;
-    private int ramSize;
-    private int storageSize;
+public abstract class Computer {
+    protected String brand;
+    protected String model;
+    protected int ramSize;
+    protected int storageSize;
 
-    public Computer(String brand, String model, int ramSize, int storageSize) {
+    protected Computer(String brand, String model, int ramSize, int storageSize) {
         this.brand = brand;
         this.model = model;
         this.ramSize = ramSize;
         this.storageSize = storageSize;
     }
 
-    public void boot() {
-        System.out.println("Computer is booting up");
-    }
+    public abstract void boot();
 
-    public void shutdown() {
-        System.out.println("Computer is shutting down");
-    }
+    public abstract void shutdown();
 
     public void displaySpecs() {
         System.out.println("Brand: " + brand + ", Model: " + model + ", RAM Size: " + ramSize + ", Storage Size: " + storageSize);

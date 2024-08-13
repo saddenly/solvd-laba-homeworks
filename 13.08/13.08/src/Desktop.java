@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Desktop extends Computer {
     private String formFactor;
 
@@ -32,5 +34,24 @@ public class Desktop extends Computer {
 
     public void setFormFactor(String formFactor) {
         this.formFactor = formFactor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Desktop desktop)) return false;
+        return Objects.equals(formFactor, desktop.formFactor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(formFactor);
+    }
+
+    @Override
+    public String toString() {
+        return "Desktop{" +
+                "formFactor='" + formFactor + '\'' +
+                '}';
     }
 }

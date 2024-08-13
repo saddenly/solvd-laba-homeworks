@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Server extends Computer {
     private int coresNumber;
 
@@ -32,5 +34,24 @@ public class Server extends Computer {
 
     public void setCoresNumber(int coresNumber) {
         this.coresNumber = coresNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Server server)) return false;
+        return coresNumber == server.coresNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(coresNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "Server{" +
+                "coresNumber=" + coresNumber +
+                '}';
     }
 }

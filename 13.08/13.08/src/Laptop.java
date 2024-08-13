@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Laptop extends Computer {
     private Display display;
     private double weight;
@@ -35,5 +37,25 @@ public class Laptop extends Computer {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Laptop laptop)) return false;
+        return Double.compare(weight, laptop.weight) == 0 && Objects.equals(display, laptop.display);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(display, weight);
+    }
+
+    @Override
+    public String toString() {
+        return "Laptop{" +
+                "display=" + display +
+                ", weight=" + weight +
+                '}';
     }
 }

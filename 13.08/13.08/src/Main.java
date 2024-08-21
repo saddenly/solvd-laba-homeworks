@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Computer laptop = new Laptop("Dell", "XPS 13", 16, 512, new Display(13.3, 12.2), 1.2);

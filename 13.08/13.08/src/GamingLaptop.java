@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class GamingLaptop extends Laptop {
+public final class GamingLaptop extends Laptop {
     private String gpuModel;
 
     public GamingLaptop(String brand, String model, int ramSize, int storageSize, Display display, double weight, String gpuModel) {

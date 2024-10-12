@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>John Doe</name>
+        <age>22</age>
+        <enrollmentDate>2023-09-01</enrollmentDate>
+        <subjects>
+            <subject>Mathematics</subject>
+            <subject>Physics</subject>
+        </subjects>
+    </student>
+    <student>
+        <name>Jane Smith</name>
+        <age>21</age>
+        <enrollmentDate>2022-09-01</enrollmentDate>
+        <subjects>
+            <subject>Chemistry</subject>
+            <subject>Biology</subject>
+        </subjects>
+    </student>
+</students>

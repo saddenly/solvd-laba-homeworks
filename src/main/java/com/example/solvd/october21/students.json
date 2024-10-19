@@ -1,0 +1,16 @@
+{
+  "students" : [
+    {
+      "name" : "John Doe",
+      "age" : 22,
+      "enrollmentDate" : "2023-09-01",
+      "subjects" : ["Mathematics", "Physics"]
+    },
+    {
+      "name" : "Jane Smith",
+      "age" : 21,
+      "enrollmentDate" : "2022-09-01",
+      "subjects" : ["Chemistry", "Biology"]
+    }
+  ]
+}
